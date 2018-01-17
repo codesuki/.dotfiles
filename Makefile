@@ -9,6 +9,7 @@ vim:
 	ln -sf ${PWD}/vim/vimrc ~/.vimrc
 
 ssh:
+	mkdir ~/.ssh
 	ln -sf ${PWD}/ssh/config ~/.ssh/config
 
 git:
