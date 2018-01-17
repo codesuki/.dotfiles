@@ -1,0 +1,7 @@
+[credential]
+        helper = osxkeychain
+[user]
+        name = Neri Marschik
+        email = codesuki@users.noreply.github.com
+[url "git@github.com:"]
+        insteadOf = https://github.com/

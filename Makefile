@@ -1,6 +1,6 @@
-.PHONY: all zsh vim ssh
+.PHONY: all zsh vim ssh git
 
-all: zsh vim ssh
+all: zsh vim ssh git
 
 zsh:
 	ln -sf ${PWD}/zsh/zshrc ~/.zshrc
@@ -10,3 +10,6 @@ vim:
 
 ssh:
 	ln -sf ${PWD}/ssh/config ~/.ssh/config
+
+git:
+	ln -sf ${PWD}/git/gitconfig ~/.gitconfig
