@@ -4,6 +4,7 @@ all: zsh vim ssh git
 
 zsh:
 	ln -sf ${PWD}/zsh/zshrc ~/.zshrc
+	ln -sf ${PWD}/zsh/zshenv ~/.zshenv
 
 vim:
 	ln -sf ${PWD}/vim/vimrc ~/.vimrc
