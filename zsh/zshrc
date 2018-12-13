@@ -2,18 +2,5 @@ source ~/.dotfiles/zsh/antigen.zsh
 
 antigen use oh-my-zsh
 
-# antigen bundle git
-# antigen bundle sorin-ionescu/prezto modules/history
-# antigen bundle sorin-ionescu/prezto modules/terminal
-# antigen bundle golang
-# antigen bundle brew
-# antigen bundle docker
-# antigen bundle kubectl
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
-
-antigen apply
-
-# fpath=(~/.zsh/completions $fpath)
-# autoload -U compinit && compinit
+alias difff='git --no-pager diff --color=auto --no-ext-diff --no-index'
+alias k=kubectl
