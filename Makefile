@@ -1,5 +1,5 @@
 .PHONY: all
-all: antibody zsh vim ssh git fonts
+all: antibody zsh tmux vim ssh git fonts
 
 .PHONY: antibody
 antibody:
@@ -10,6 +10,10 @@ zsh: antibody
 	cd zsh && antibody bundle < plugins.txt > plugins.sh
 	ln -sf ${PWD}/zsh/zshrc ~/.zshrc
 	ln -sf ${PWD}/zsh/zshenv ~/.zshenv
+
+.PHONY: tmux
+tmux:
+	ln -sf ${PWD}/tmux/tmux.conf ~/.tmux.conf
 
 .PHONY: vim
 vim:
