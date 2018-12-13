@@ -1,2 +1,5 @@
 export GOPATH=$HOME/Development/go
 PATH=$PATH:$GOPATH/bin
+
+export ANDROID_HOME=/Users/$(whoami)/Library/Android/sdk
+
