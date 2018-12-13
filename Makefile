@@ -15,3 +15,7 @@ ssh:
 
 git:
 	ln -sf ${PWD}/git/gitconfig ~/.gitconfig
+
+.PHONY: fonts
+fonts:
+	find . -name '*.ttf' -print0 | xargs -0 -I {} cp {} ~/Library/Fonts
