@@ -1,0 +1,7 @@
+robbyrussell/oh-my-zsh
+robbyrussell/oh-my-zsh path:plugins/helm
+robbyrussell/oh-my-zsh path:plugins/z
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+zsh-users/zsh-syntax-highlighting
+mafredri/zsh-async
+sindresorhus/pure
