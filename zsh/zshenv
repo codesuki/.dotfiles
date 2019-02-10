@@ -3,3 +3,7 @@ PATH=$PATH:$GOPATH/bin
 
 export ANDROID_HOME=/Users/$(whoami)/Library/Android/sdk
 
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+export LS_COLORS=$(cat /Users/$(whoami)/.dotfiles/zsh/ls_colors_snazzy_8bit)
