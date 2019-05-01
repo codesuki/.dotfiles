@@ -4,6 +4,7 @@ all: brew antibody zsh tmux vim ssh git fonts
 .PHONY: brew
 brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew analytics off
 	brew bundle install
 
 .PHONY: antibody
