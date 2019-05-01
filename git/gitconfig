@@ -3,5 +3,10 @@
 [user]
         name = Neri Marschik
         email = codesuki@users.noreply.github.com
+        signingkey = 6DCDDC2DC0DA73EC
 [url "git@github.com:"]
         insteadOf = https://github.com/
+[commit]
+        gpgsign = true
+[gpg]
+        program = /usr/local/MacGPG2/bin/gpg2

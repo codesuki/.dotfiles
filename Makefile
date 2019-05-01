@@ -37,3 +37,8 @@ git:
 .PHONY: fonts
 fonts:
 	find . -name '*.ttf' -print0 | xargs -0 -I {} cp {} ~/Library/Fonts
+
+.PHONY: gpg
+gpg:
+	ln -sf ${PWD}/gpg/gpg.conf ~/.gnupg/gpg.conf
+	ln -sf ${PWD}/gpg/gpg-agent.conf ~/.gnupg/gpg-agent.conf

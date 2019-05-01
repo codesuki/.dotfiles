@@ -7,3 +7,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.in
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 export LS_COLORS=$(cat /Users/$(whoami)/.dotfiles/zsh/ls_colors_snazzy_8bit)
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
