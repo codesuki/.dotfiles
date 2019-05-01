@@ -12,3 +12,17 @@
         gpgsign = true
 [gpg]
         program = /usr/local/MacGPG2/bin/gpg2
+[alias]
+        co = "!f() { \
+        git checkout $(git branch --list -vv | fzf +m --preview 'git log --cherry-mark --graph {+1}...' | sed 's/*//' | awk '{print $1}'); \
+        }; f"
+
+        rb = "!f() { \
+        local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
+        git rebase -i --autosquash ${commit}; \
+        }; f"
+
+        fix = "!f() { \
+        local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
+        git commit --fixup ${commit}; \
+        }; f"

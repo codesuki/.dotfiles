@@ -5,3 +5,6 @@ source ~/.dotfiles/zsh/plugins.sh
 
 alias difff='git --no-pager diff --color=auto --no-ext-diff --no-index'
 alias k=kubectl
+export FZF_DEFAULT_OPTS='--bind=up:preview-up,down:preview-down'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
