@@ -26,3 +26,5 @@
         local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
         git commit --fixup ${commit}; \
         }; f"
+
+        ad = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
