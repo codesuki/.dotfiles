@@ -11,6 +11,21 @@ alias k=kubectl
 alias grep=ggrep
 alias sed=gsed
 
+tm() {
+  [[ -n "$TMUX" ]] && change="switch-client" || change="attach-session"
+  if [ $1 ]; then
+      tmux $change -t "$1" 2>/dev/null || (tmux new-session -d -s $1 && tmux $change -t "$1")
+      return
+  fi
+  session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | fzf --exit-0) && tmux $change -t "$session" || echo "No sessions found."
+}
+
+unalias z 2> /dev/null
+z() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
+
 export FZF_DEFAULT_OPTS='--bind=up:preview-up,down:preview-down'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
