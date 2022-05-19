@@ -29,3 +29,10 @@ z() {
 export FZF_DEFAULT_OPTS='--bind=up:preview-up,down:preview-down'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function weather {
+    curl "wttr.in/${1:-tsuzuki-ku}?m"
+}
+
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
