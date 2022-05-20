@@ -1,5 +1,9 @@
 .PHONY: all
-all: brew antibody zsh tmux vim ssh git fonts
+all: brew antibody bazel zsh tmux vim ssh git fonts
+
+.PHONY: bazel
+bazel:
+	ln -sf ${PWD}/bazel/bazelrc ~/.bazelrc
 
 .PHONY: emacs
 emacs:
@@ -17,7 +21,7 @@ antibody:
 	brew install getantibody/tap/antibody
 
 .PHONY: zsh
-zsh: antibody
+zsh: 
 	cd zsh && antibody bundle < plugins.txt > plugins.sh
 	ln -sf ${PWD}/zsh/zshrc ~/.zshrc
 	ln -sf ${PWD}/zsh/zshenv ~/.zshenv

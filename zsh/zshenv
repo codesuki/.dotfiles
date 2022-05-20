@@ -1,8 +1,9 @@
-export GOPATH=$HOME/Development/go
-
 eval `/usr/libexec/path_helper -s`
+eval $(/opt/homebrew/bin/brew shellenv)
 export PATH="$GOPATH/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+export GOPATH=$HOME/Development/go
 
 export ANDROID_HOME=/Users/$(whoami)/Library/Android/sdk
 
@@ -12,3 +13,8 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+
+if [ -d "/Applications/Emacs.app/Contents/MacOS/bin" ]; then
+  export PATH="/Applications/Emacs.app/Contents/MacOS/bin:$PATH"
+  alias emacs="emacs -nw" # Always launch "emacs" in terminal mode.
+fi
