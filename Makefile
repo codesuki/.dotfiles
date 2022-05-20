@@ -21,7 +21,7 @@ antibody:
 	brew install getantibody/tap/antibody
 
 .PHONY: zsh
-zsh: 
+zsh:
 	cd zsh && antibody bundle < plugins.txt > plugins.sh
 	ln -sf ${PWD}/zsh/zshrc ~/.zshrc
 	ln -sf ${PWD}/zsh/zshenv ~/.zshenv
