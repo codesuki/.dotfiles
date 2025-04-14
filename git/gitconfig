@@ -1,32 +1,40 @@
 [pager]
-        branch = false
+	branch = false
 [credential]
-        helper = osxkeychain
+	helper = osxkeychain
 [user]
-        name = Neri Marschik
-        email = codesuki@users.noreply.github.com
-        signingkey = 6DCDDC2DC0DA73EC
+	name = Neri Marschik
+	email = codesuki@users.noreply.github.com
+	signingkey = 6DCDDC2DC0DA73EC
 [url "git@github.com:"]
-        insteadOf = https://github.com/
+	insteadOf = https://github.com/
 [commit]
-        gpgsign = true
+	gpgsign = true
 [gpg]
-        program = /usr/local/MacGPG2/bin/gpg2
+	program = /usr/local/MacGPG2/bin/gpg2
 [alias]
-        co = "!f() { \
-        git checkout $(git branch --list -vv | fzf +m --preview 'git log --cherry-mark --graph {+1}...' | sed 's/*//' | awk '{print $1}'); \
-        }; f"
+	co = "!f() { \
+	git checkout $(git branch --list -vv | fzf +m --preview 'git log --cherry-mark --graph {+1}...' | sed 's/*//' | awk '{print $1}'); \
+	}; f"
 
-        rb = "!f() { \
-        local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
-        git rebase -i --autosquash ${commit}; \
-        }; f"
+	rb = "!f() { \
+	local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
+	git rebase -i --autosquash ${commit}; \
+	}; f"
 
-        fix = "!f() { \
-        local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
-        git commit --fixup ${commit}; \
-        }; f"
+	fix = "!f() { \
+	local commit=$(git log --oneline | fzf +m --preview 'git show {+1}' | awk '{print $1}' | tr -d ' '); \
+	git commit --fixup ${commit}; \
+	}; f"
 
-        ad = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+	ad = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
+
+	lo = "!git log --oneline | fzf +m --preview 'git show {+1}'"
 [github]
-        user = codesuki
+	user = codesuki
+[core]
+	fsmonitor = true
+[diff]
+	algorithm = histogram
+[merge]
+	conflictStyle = zdiff3
