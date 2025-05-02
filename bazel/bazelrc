@@ -1,0 +1,3 @@
+# Use global cache
+common --repository_cache=~/Development/tmp/cache/bazel/repository_cache
+common --disk_cache=~/Development/tmp/cache/bazel/disk_cache

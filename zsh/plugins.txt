@@ -1,6 +1,7 @@
-robbyrussell/oh-my-zsh
-robbyrussell/oh-my-zsh path:plugins/z
-robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+getantidote/use-omz        # handle OMZ dependencies
+ohmyzsh/ohmyzsh path:lib   # load OMZ's library
+ohmyzsh/ohmyzsh path:plugins/z
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 zdharma-continuum/fast-syntax-highlighting
 mafredri/zsh-async
 sindresorhus/pure branch:main
