@@ -11,6 +11,15 @@ fi
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 antidote load ~/.dotfiles/zsh/plugins.txt
 
+HISTSIZE=10000000
+SAVEHIST=10000000
+# Immediately write history file
+setopt INC_APPEND_HISTORY
+# Ignore all duplicates
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+
 bindkey "^P" up-line-or-beginning-search
 bindkey "^N" down-line-or-beginning-search
 
