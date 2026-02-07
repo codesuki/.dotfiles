@@ -1,4 +1,4 @@
-# name: Default + Alpha
+# name: Default + customization
 # author: Lily Ballard
 
 function fish_prompt --description 'Write out the prompt'
@@ -31,6 +31,6 @@ function fish_prompt --description 'Write out the prompt'
     set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
     echo
-    echo -s (prompt_login)' ' (set_color $color_cwd) (prompt_pwd) (set_color 242) (fish_vcs_prompt " %s") $normal " "$prompt_status " "
-    echo -n (set_color magenta)$suffix' '
+    echo -s (prompt_login)' ' (set_color $color_cwd) (prompt_pwd) (set_color brblack) (fish_vcs_prompt " %s") $normal " "$prompt_status " "
+    echo -n (set_color magenta)$suffix $normal
 end

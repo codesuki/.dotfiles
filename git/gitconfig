@@ -9,7 +9,7 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg2
 [alias]
@@ -34,6 +34,7 @@
 	user = codesuki
 [core]
 	fsmonitor = true
+	editor = emacsclient -c -a ''
 [diff]
 	algorithm = histogram
 [merge]
